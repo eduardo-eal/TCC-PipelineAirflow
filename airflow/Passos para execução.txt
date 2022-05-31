@@ -1,0 +1,28 @@
+Todas as dependências foram previamente instaladas.
+
+Baixar e copiar os arquivos True.csv e Fake.csv para a pasta airflow/dags/tcc_scripts/feature_store
+https://drive.google.com/file/d/1IuVZ7oXp9-0ATXsG_DlPhIb0ho9p3euZ/view?usp=sharing
+https://drive.google.com/file/d/1yDlor_xpWgMoTMsa6EI9R78d4U1Xg-Q5/view?usp=sharing
+
+Para executar o Airflow:
+cd Airflow
+# inicializa o banco de dados
+airflow db init
+# cria usuário
+airflow users create \
+--username admin \
+--firstname Peter \
+--lastname Parker \
+--role Admin \
+--email spiderman@superhero.org
+# iniciar web server, porta padrão é 8080
+airflow webserver --port 8080
+# iniciar scheduler
+airflow scheduler
+
+Para inicializar a interface gráfica do MLFlow
+cd airflow/dags/tcc_scripts
+# inicializa interface gráfica na porta 5000
+mlflow ui
+
+
